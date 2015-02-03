@@ -1,20 +1,22 @@
 #ifndef DYNAMICARRAY_H_
 #define DYNAMICARRAY_H_
 
+#include <iostream>
 
 class DynamicArray
 {
 
 public:
 	DynamicArray(int _capacite = 100);
-	int getCapacite();
+	~DynamicArray();
+	int getCapacite() const;
 	void setCapacite(int _capacite);
 	void setElement(unsigned int _index, int _valeur);
-	int getElement(unsigned int _index);
+	int getElement(unsigned int _index) const;
 
 private:
 	int capacite;
-	int* tabElements;
+	int * tabElements;
 };
 
 
